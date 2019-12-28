@@ -1,0 +1,18 @@
+from sorting import sort
+
+------------------
+sorting.py in the form
+------------------
+
+def sort(*a, **kw):
+
+    def bubble():
+        pass
+
+    def merge():
+        pass
+
+    def quick():
+        pass
+
+    ...
