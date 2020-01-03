@@ -1,0 +1,51 @@
+#: import rd random
+<CornerRectangleWidget@Label>
+    canvas.before:
+        Color:
+            rgba: 1, 0, 0, 1
+        Rectangle:
+            pos: self.pos
+            size: self.width, self.height
+
+<MainBody>:
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: 50
+        Button:
+            text: 'Press to generate new Array'
+            size_hint_y: None
+            height: 50
+            on_press:
+                root.gen_rd_arr()
+                root.displayArr(root.rdarr)
+        Button:
+            text: 'Press to sort Array'
+            size_hint_y: None
+            height: 50
+            on_press:
+                root.displayArr(root.sortArr())
+        Button:
+            text: 'Press to bubble sort Array'
+            size_hint_y: None
+            height: 50
+            on_press:
+                root.displayArr(root.sort_bubble(root.getarr()))
+        Button:
+            text: 'Press to merge sort Array'
+            size_hint_y: None
+            height: 50
+            on_press:
+                root.displayArr(root.sort_merge(root.getarr()))
+        Button:
+            text: 'Change color of random Label'
+            size_hint_y: None
+            height: 50
+            on_press:
+                root.changecolor()
+
+    FloatLayout:
+        BoxLayout:
+            id: BoxL
+            orientation: 'horizontal'
+            spacing: 1
